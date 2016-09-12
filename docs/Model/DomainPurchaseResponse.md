@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **total** | **int** | Total cost of the domain and any selected add-ons | 
 **currency** | **string** | Currency in which the &#x60;total&#x60; is listed | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

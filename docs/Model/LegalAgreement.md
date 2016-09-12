@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **url** | **string** | URL to a page containing the legal agreement | [optional] 
 **content** | **string** | Contents of the legal agreement, suitable for embedding | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

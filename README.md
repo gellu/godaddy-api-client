@@ -94,7 +94,7 @@ $purchase = $apiInstance->purchase($domainPurchase);
 
 ## Documentation For Models
 
- - [Address](godaddy-api-client/blob/mastergodaddy-api-client/blob/master/docs/Model/Address.md)
+ - [Address](godaddy-api-client/blob/master/docs/Model/Address.md)
  - [Consent](godaddy-api-client/blob/master/docs/Model/Consent.md)
  - [Contact](godaddy-api-client/blob/master/docs/Model/Contact.md)
  - [DNSRecord](godaddy-api-client/blob/master/docs/Model/DNSRecord.md)

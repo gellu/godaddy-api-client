@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **code** | **string** | Short identifier for the error, suitable for indicating the specific error within client code | 
 **message** | **string** | Human-readable, English description of the problem with the contents of the field | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

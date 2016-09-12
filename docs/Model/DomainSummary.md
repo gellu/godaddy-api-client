@@ -23,6 +23,6 @@ Name | Type | Description | Notes
 **contact_admin** | [**\GoDaddyDomainsClient\Model\Contact**](Contact.md) | Administrative contact for the domain registration | [optional] 
 **contact_tech** | [**\GoDaddyDomainsClient\Model\Contact**](Contact.md) | Technical contact for the domain registration | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

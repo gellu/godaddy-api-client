@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **image** | **string** | The base64 encoded string of the document image. The document image must be in JPEG format with a file size between 4KB and 2MB | 
 **consent** | [**\GoDaddyDomainsClient\Model\Consent**](Consent.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

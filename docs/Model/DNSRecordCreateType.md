@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **port** | **int** | Service port (SRV only) | [optional] 
 **weight** | **int** | Record weight (SRV only) | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 
