@@ -1,6 +1,6 @@
 # GoDaddy Domains API Client
 
-API client for[GoDaddy](https://developer.godaddy.com) 
+API client for[GoDaddy Domains](https://developer.godaddy.com) 
 
 ## Requirements
 
