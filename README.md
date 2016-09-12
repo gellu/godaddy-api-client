@@ -26,10 +26,9 @@ Then run `composer install`
 
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
 
-const API_KEY = 'dKYQMqaKm5qZ_BL4bc9pSWi9h3x2cRnW3hq';
-const API_SECRET = '3YFoJRdwcC7UAocLb4D8ZV';
+const API_KEY 		= ''; // key obtained from https://developer.godaddy.com
+const API_SECRET 	= ''; // secret obtained from https://developer.godaddy.com
 
 $domain 			= 'test-domain.com';
 $domainPeriod 		= 1;
@@ -95,7 +94,7 @@ $purchase = $apiInstance->purchase($domainPurchase);
 
 ## Documentation For Models
 
- - [Address](docs/Model/Address.md)
+ - [Address](godaddy-api-client/blob/master/docs/Model/Address.md)
  - [Consent](docs/Model/Consent.md)
  - [Contact](docs/Model/Contact.md)
  - [DNSRecord](docs/Model/DNSRecord.md)
