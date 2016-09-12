@@ -1,0 +1,25 @@
+{
+    "name": "gellu/godaddy-api-client",
+    "description": "Api client for GoDaddy Domains",
+    "authors": [
+        {
+            "name": "Grzegorz Krysiak (gellu)",
+            "email": "grkrysiak@gmail.com"
+        }
+    ],
+    "keywords": [
+        "php",
+        "sdk",
+        "api",
+        "godaddy"
+    ],
+    "require": {
+        "php": ">=5.4",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4": { "GoDaddyDomainsClient\\" : "lib/" }
+    }
+}
