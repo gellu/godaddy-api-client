@@ -1,6 +1,7 @@
 {
     "name": "gellu/godaddy-api-client",
     "description": "Api client for GoDaddy Domains",
+    "license": "MIT",
     "authors": [
         {
             "name": "Grzegorz Krysiak (gellu)",
