@@ -1,6 +1,6 @@
 # GoDaddy Domains API Client
 
-API client for[GoDaddy Domains](https://developer.godaddy.com) 
+API client for [GoDaddy Domains](https://developer.godaddy.com) 
 
 ## Requirements
 
@@ -9,7 +9,7 @@ PHP 5.4.0 and later
 ## Installation & Usage
 ### Composer
 
-To install the bindings via[Composer](http://getcomposer.org/) add the following to `composer.json`:
+To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
 
 ```php
 {
