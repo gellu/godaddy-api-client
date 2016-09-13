@@ -86,8 +86,8 @@ $domainPurchase->setContactAdmin($domainContactAdmin);
 $domainPurchase->setContactBilling($domainContactAdmin);
 $domainPurchase->setContactRegistrant($domainContactAdmin);
 $domainPurchase->setContactTech($domainContactAdmin);
-$domainPurchase->setPeriod(1);
-$domainPurchase->setRenewAuto(false);
+$domainPurchase->setPeriod($domainPeriod);
+$domainPurchase->setRenewAuto($domainAutoRenew);
 
 $purchase = $apiInstance->purchase($domainPurchase);
 ```
