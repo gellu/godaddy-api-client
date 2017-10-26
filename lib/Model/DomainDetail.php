@@ -67,15 +67,15 @@ class DomainDetail implements ArrayAccess
         'domain_id' => 'double',
         'domain' => 'string',
         'status' => 'string',
-        'expires' => '\GoDaddyDomainsClient\Model\Datetime',
+        'expires' => '\DateTime',
         'expiration_protected' => 'bool',
         'hold_registrar' => 'bool',
         'locked' => 'bool',
         'privacy' => 'bool',
         'renew_auto' => 'bool',
-        'renew_deadline' => '\GoDaddyDomainsClient\Model\Datetime',
+        'renew_deadline' => '\DateTime',
         'transfer_protected' => 'bool',
-        'created_at' => '\GoDaddyDomainsClient\Model\Datetime',
+        'created_at' => '\DateTime',
         'auth_code' => 'string',
         'name_servers' => 'string[]',
         'contact_registrant' => '\GoDaddyDomainsClient\Model\Contact',
@@ -415,7 +415,7 @@ class DomainDetail implements ArrayAccess
 
     /**
      * Gets expires
-     * @return \GoDaddyDomainsClient\Model\Datetime
+     * @return \Datetime
      */
     public function getExpires()
     {
@@ -424,7 +424,7 @@ class DomainDetail implements ArrayAccess
 
     /**
      * Sets expires
-     * @param \GoDaddyDomainsClient\Model\Datetime $expires Date and time when this domain will expire
+     * @param \Datetime $expires Date and time when this domain will expire
      * @return $this
      */
     public function setExpires($expires)
@@ -541,7 +541,7 @@ class DomainDetail implements ArrayAccess
 
     /**
      * Gets renew_deadline
-     * @return \GoDaddyDomainsClient\Model\Datetime
+     * @return \Datetime
      */
     public function getRenewDeadline()
     {
@@ -550,7 +550,7 @@ class DomainDetail implements ArrayAccess
 
     /**
      * Sets renew_deadline
-     * @param \GoDaddyDomainsClient\Model\Datetime $renew_deadline Date the domain must renew on
+     * @param Datetime $renew_deadline Date the domain must renew on
      * @return $this
      */
     public function setRenewDeadline($renew_deadline)
@@ -583,7 +583,7 @@ class DomainDetail implements ArrayAccess
 
     /**
      * Gets created_at
-     * @return \GoDaddyDomainsClient\Model\Datetime
+     * @return \Datetime
      */
     public function getCreatedAt()
     {
@@ -592,7 +592,7 @@ class DomainDetail implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param \GoDaddyDomainsClient\Model\Datetime $created_at Date and time when this domain was created
+     * @param \Datetime $created_at Date and time when this domain was created
      * @return $this
      */
     public function setCreatedAt($created_at)
