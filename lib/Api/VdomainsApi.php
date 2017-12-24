@@ -105,11 +105,11 @@ class VdomainsApi
      *
      * Determine whether or not the specified domain is available for purchase
      *
-     * @param string $domain Domain name whose availability is to be checked (required)
+     * @param string|array $domain Domain name or array of domain names whose availability is to be checked (required)
      * @param string $check_type Optimize for time (&#39;FAST&#39;) or accuracy (&#39;FULL&#39;) (optional, default to FAST)
      * @param bool $for_transfer Whether or not to include domains available for transfer (optional, default to false)
      * @param int $wait_ms Maximum amount of time, in milliseconds, to wait for responses If elapses, return the results compiled up to that point, some of which may not be authoritative (optional, default to 1000)
-     * @return \GoDaddyDomainsClient\Model\DomainAvailableResponse
+     * @return \GoDaddyDomainsClient\Model\DomainAvailableResponse|array of \GoDaddyDomainsClient\Model\DomainAvailableResponse
      * @throws \GoDaddyDomainsClient\ApiException on non-2xx response
      */
     public function available($domain, $check_type = null, $for_transfer = null, $wait_ms = null)
@@ -123,11 +123,11 @@ class VdomainsApi
      *
      * Determine whether or not the specified domain is available for purchase
      *
-     * @param string $domain Domain name whose availability is to be checked (required)
+     * @param string|array $domain Domain name or array of domain names whose availability is to be checked (required)
      * @param string $check_type Optimize for time (&#39;FAST&#39;) or accuracy (&#39;FULL&#39;) (optional, default to FAST)
      * @param bool $for_transfer Whether or not to include domains available for transfer (optional, default to false)
      * @param int $wait_ms Maximum amount of time, in milliseconds, to wait for responses If elapses, return the results compiled up to that point, some of which may not be authoritative (optional, default to 1000)
-     * @return Array of \GoDaddyDomainsClient\Model\DomainAvailableResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \GoDaddyDomainsClient\Model\DomainAvailableResponse|array of \GoDaddyDomainsClient\Model\DomainAvailableResponse , HTTP status code, HTTP response headers (array of strings)
      * @throws \GoDaddyDomainsClient\ApiException on non-2xx response
      */
     public function availableWithHttpInfo($domain, $check_type = null, $for_transfer = null, $wait_ms = null)
@@ -139,6 +139,7 @@ class VdomainsApi
         // parse inputs
         $resourcePath = "/v1/domains/available";
         $httpBody = '';
+	    $method = 'GET';
         $queryParams = array();
         $headerParams = array();
         $formParams = array();
@@ -150,7 +151,12 @@ class VdomainsApi
 
         // query params
         if ($domain !== null) {
-            $queryParams['domain'] = $this->apiClient->getSerializer()->toQueryValue($domain);
+	        if (is_array($domain)) {
+		        $httpBody .= json_encode($domain);
+		        $method = 'POST';
+	        } else {
+		        $queryParams['domain'] = $this->apiClient->getSerializer()->toQueryValue($domain);
+	        }
         }
         // query params
         if ($check_type !== null) {
@@ -178,15 +184,23 @@ class VdomainsApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'GET',
+                $method,
                 $queryParams,
                 $httpBody,
                 $headerParams,
                 '\GoDaddyDomainsClient\Model\DomainAvailableResponse',
                 '/v1/domains/available'
             );
+            if (!empty($response->domains)) {
+	            $objects = array();
+	            foreach ( $response->domains as $domain ) {
+		            $objects[] = $this->apiClient->getSerializer()->deserialize($domain, '\GoDaddyDomainsClient\Model\DomainAvailableResponse', $httpHeader);
+	            }
+            } else {
+	            $objects = $this->apiClient->getSerializer()->deserialize($response, '\GoDaddyDomainsClient\Model\DomainAvailableResponse', $httpHeader);
+            }
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\GoDaddyDomainsClient\Model\DomainAvailableResponse', $httpHeader), $statusCode, $httpHeader);
+	        return array( $objects, $statusCode, $httpHeader );
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
